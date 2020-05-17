@@ -1,0 +1,8 @@
+@import "~@material/chips/mixins";
+
+.show-todo {
+  &__chip.mdc-chip {
+    @include mdc-chip-fill-color($color-accent);
+    @include mdc-chip-ink-color($color-white);
+  }
+}

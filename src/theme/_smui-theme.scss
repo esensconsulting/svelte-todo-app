@@ -1,0 +1,14 @@
+@import "../sass/abstracts/variables";
+@import "~@material/theme/color-palette";
+
+// Svelte Colors!
+$mdc-theme-primary: $color-primary;
+$mdc-theme-secondary: $color-accent;
+
+$mdc-theme-on-primary: $color-white;
+$mdc-theme-on-secondary: $color-white;
+
+$mdc-theme-background: $color-white;
+$mdc-theme-surface: $color-white;
+
+$mdc-theme-error: $color-error;
