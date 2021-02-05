@@ -29,7 +29,8 @@
   aria-labelledby="dialog-title"
   aria-describedby="dialog-content"
   class="show-todo"
-  on:MDCDialog:closed>
+  on:MDCDialog:closed
+>
   <Title id="dialog-title">{todo.label.toUpperCase()}</Title>
   <Content id="dialog-content" style="display: flex; flex-direction: column">
     <List nonInteractive>

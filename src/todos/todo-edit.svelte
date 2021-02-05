@@ -64,7 +64,8 @@
         label="Label"
         type="text"
         style="min-width: 100%"
-        use={[InitialFocus]} />
+        use={[InitialFocus]}
+      />
       <HelperText validationMsg>Label is required</HelperText>
     </div>
     <div class="mt:3@xs">
@@ -74,7 +75,8 @@
         invalid={dateInvalid}
         label="Date"
         type="date"
-        style="min-width: 100%" />
+        style="min-width: 100%"
+      />
       <HelperText validationMsg>Date is required</HelperText>
     </div>
     <div class="mt:3@xs">
@@ -84,7 +86,8 @@
         invalid={tagInvalid}
         label="Tag"
         type="text"
-        style="min-width: 100%" />
+        style="min-width: 100%"
+      />
       <HelperText validationMsg>Tag is required</HelperText>
     </div>
   </Content>

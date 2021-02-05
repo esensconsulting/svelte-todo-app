@@ -10,6 +10,7 @@
 
   let menu;
   let anchor;
+  let anchorClasses = [];
   const dispatch = createEventDispatcher();
 
   export let todo;
@@ -50,7 +51,11 @@
       <SecondaryText>{formatDate(todo.date)}</SecondaryText>
     </Text>
     <Meta>
-      <div class="list-todo__list-item-actions" use:Anchor bind:this={anchor}>
+      <div
+        class="list-todo__list-item-actions {anchorClasses.join('')}"
+        use:Anchor={{ classForward: (classes) => (anchorClasses = classes) }}
+        bind:this={anchor}
+      >
         {#if !displayMenu}
           <IconButton class="material-icons list-todo__btn list-todo__btn--show" on:click={showTodo} title="Show more">
             remove_red_eye
