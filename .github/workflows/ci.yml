@@ -31,15 +31,14 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           browser: ${{ matrix.browser }}
-          group: ${{ matrix.node }}
           start: npm run start
           install: false
           headless: true
           wait-on: 'http://localhost:5000'
           record: true
           spec: cypress/integration/svelte-todo-app/**/*.js
-          tag: ${{ github.event_name }}-node-${{ matrix.node }}-${{ matrix.browser }}-on-${{ runner.os }}-hash-${{ hashFiles('package-lock.json') }}
-          cache-key: ${{ github.event_name }}-node-v${{ matrix.node }}-${{ matrix.browser }}-on-${{ runner.os }}-hash-${{ hashFiles('package-lock.json') }}
+          tag: ${{ github.event_name }}-node-${{ matrix.node }}-${{ matrix.browser }}-on-${{ matrix.os }}-hash-${{ hashFiles('package-lock.json') }}
+          cache-key: ${{ github.event_name }}-node-v${{ matrix.node }}-${{ matrix.browser }}-on-${{ matrix.os }}-hash-${{ hashFiles('package-lock.json') }}
         env:
           CI: true
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
