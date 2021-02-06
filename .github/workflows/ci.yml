@@ -47,10 +47,10 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
-          name: cypress-screenshots
+          name: cypress-screenshots-node-v${{ matrix.node }}-${{ matrix.browser }}-on-${{ runner.os }}
           path: cypress/screenshots
       - uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: cypress-videos
+          name: cypress-videos-node-v${{ matrix.node }}-${{ matrix.browser }}-on-${{ runner.os }}
           path: cypress/videos
