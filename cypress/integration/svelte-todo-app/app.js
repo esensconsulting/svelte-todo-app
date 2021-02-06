@@ -258,7 +258,7 @@ describe('app page test suite', () => {
     });
   });
 
-  const sizes = ['ipad-2', [800, 480]];
+  const sizes = [[800, 480], 'ipad-2'];
   sizes.forEach((size) => {
     it(`should display menu item on ${size} screen`, () => {
       if (Cypress._.isArray(size)) {
@@ -286,6 +286,8 @@ describe('app page test suite', () => {
       cy.get('@menuItems').eq(0).scrollIntoView().should('be.visible').should('contain', 'Show more');
       cy.get('@menuItems').eq(1).scrollIntoView().should('be.visible').should('contain', 'Edit');
       cy.get('@menuItems').eq(2).scrollIntoView().should('be.visible').should('contain', 'Delete');
+      app.getCardTitle().click();
+      cy.get('@actions').should('not.be.visible');
       app
         .getAddButton()
         .should('be.visible')
