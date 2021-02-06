@@ -86,7 +86,8 @@
 
     &--show,
     &--edit,
-    &--delete {
+    &--delete,
+    &--menu {
       @include mdc-icon-button-ink-color($color-accent);
     }
   }

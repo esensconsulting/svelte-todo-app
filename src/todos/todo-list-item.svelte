@@ -67,7 +67,7 @@
             delete
           </IconButton>
         {:else}
-          <IconButton class="material-icons list-todo__btn list-todo__btn--show" on:click={toggleMenu}>
+          <IconButton class="material-icons list-todo__btn list-todo__btn--menu" on:click={toggleMenu}>
             more_vert
           </IconButton>
           <Menu bind:this={menu} anchor={false} bind:anchorElement={anchor} fixed>

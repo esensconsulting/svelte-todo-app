@@ -43,7 +43,7 @@
       <Item>
         <p>
           <strong>Date :</strong>
-          {moment(todo.date).format('MMMM Do, yyyy')}
+          <span>{moment(todo.date).format('MMMM Do, yyyy')}</span>
         </p>
       </Item>
     </List>
