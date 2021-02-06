@@ -2,7 +2,6 @@
   "projectId": "3t579y",
   "chromeWebSecurity": false,
   "modifyObstructiveCode": true,
-  "experimentalSourceRewriting": true,
   "env": {
     "url": "http://localhost:5000/"
   },

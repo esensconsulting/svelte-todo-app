@@ -283,9 +283,9 @@ describe('app page test suite', () => {
         .should('contain', 'more_vert');
       cy.get('@itemMenuButton').click().next().find('.list-todo__menu').as('actions').should('be.visible');
       cy.get('@actions').find('li[role="menuitem"]').as('menuItems').should('have.length', 3);
-      cy.get('@menuItems').eq(0).should('be.visible').should('contain', 'Show more');
-      cy.get('@menuItems').eq(1).should('be.visible').should('contain', 'Edit');
-      cy.get('@menuItems').eq(2).should('be.visible').should('contain', 'Delete');
+      cy.get('@menuItems').eq(0).scrollIntoView().should('be.visible').should('contain', 'Show more');
+      cy.get('@menuItems').eq(1).scrollIntoView().should('be.visible').should('contain', 'Edit');
+      cy.get('@menuItems').eq(2).scrollIntoView().should('be.visible').should('contain', 'Delete');
       app
         .getAddButton()
         .should('be.visible')
