@@ -32,13 +32,17 @@ jobs:
         with:
           browser: ${{ matrix.browser }}
           group: ${{ matrix.node }}
+          build: npm run build
           start: npm run start
+          install: false
           headless: true
           wait-on: 'http://localhost:5000'
           record: true
           tag: ${{ github.event_name }}-node-${{ matrix.node }}-${{ matrix.browser }}
           spec: cypress/integration/svelte-todo-app/**/*.js
+          cache-key: ${{ github.event_name }}-node-v${{ matrix.node }}-${{ matrix.browser }}-on-${{ runner.os }}-hash-${{ hashFiles('package-lock.json') }}
         env:
+          CI: true
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
