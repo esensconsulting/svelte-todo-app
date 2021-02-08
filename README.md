@@ -1,6 +1,7 @@
 # Svelte Todo App
 
 [![GitHub CI](https://github.com/esensconsulting/svelte-todo-app/workflows/CI/badge.svg)](https://github.com/esensconsulting/svelte-todo-app/actions?query=workflow%3ACI)
+[![svelte-todo-app](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/3t579y/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/3t579y/runs)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
